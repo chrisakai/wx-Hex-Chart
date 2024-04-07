@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <t-button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </t-button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  <view class="usermessages">
+    <t-button bindtap="subscribeMessages">订阅消息</t-button>
+  </view>
+  <view class="useropenid">
+    <t-button bindtap="syncOpenid">同步openid</t-button>
+  </view>
+  <t-button bindtap="selectPlanlist">查看方案</t-button>
+</view>

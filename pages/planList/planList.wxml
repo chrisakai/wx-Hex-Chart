@@ -1,0 +1,3 @@
+<!--pages/planList/planList.wxml-->
+<text>pages/planList/planList.wxml</text>
+<t-fab icon="add" bind:click="addPlan" aria-label="增加"></t-fab>
