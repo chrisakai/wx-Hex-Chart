@@ -1,2 +1,55 @@
 <!--pages/addPlan/plan.wxml-->
-<text>pages/addPlan/plan.wxml</text>
+<view class="demo">
+  <view class="demo-desc">上传图片</view>
+  <t-upload
+    disabled
+    mediaType="{{['video','image']}}"
+    max="{{1}}"
+    files="{{fileList}}"
+    bind:add="handleAdd"
+    bind:remove="handleRemove"
+  >
+  </t-upload>
+</view>
+<view class="demo">
+  <view class="demo-desc">文字描述</view>
+  <t-textarea bindinput="bindContent"
+  t-class="demo-class"
+  placeholder="请输入内容"
+  maxlength="200"
+  disableDefaultPadding="{{true}}"
+  indicator
+/>
+</view>
+<view class="demo">
+    <view class="demo-desc">六维评分</view>
+    <view class="demo-rate">
+    <view class="demo-rate__title">成本</view>
+    <t-rate default-value="{{3}}" allowHalf />
+    </view>
+    <view class="demo-rate">
+    <view class="demo-rate__title">大气</view>
+    <t-rate default-value="{{3}}" allowHalf />
+    </view>
+    <view class="demo-rate">
+    <view class="demo-rate__title">喜庆</view>
+    <t-rate default-value="{{3}}" allowHalf />
+    </view>
+    <view class="demo-rate">
+    <view class="demo-rate__title">创意</view>
+    <t-rate default-value="{{3}}" allowHalf />
+    </view>
+    <view class="demo-rate">
+    <view class="demo-rate__title">鲜花</view>
+    <t-rate default-value="{{3}}" allowHalf />
+    </view>
+    <view class="demo-rate">
+    <view class="demo-rate__title">协调</view>
+    <t-rate default-value="{{3}}" allowHalf />
+    </view>
+</view>
+
+<view class="button-example">
+  <t-button bindtap="save" theme="primary" size="large" block>添加方案</t-button>
+</view>
+

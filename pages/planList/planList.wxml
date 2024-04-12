@@ -1,3 +1,5 @@
 <!--pages/planList/planList.wxml-->
-<text>pages/planList/planList.wxml</text>
+<view bindtap="toEdit" data-index="{{index}}" class="list" wx:for="{{list}}">
+      <view class="list-content">{{item.content}}</view>
+</view>
 <t-fab icon="add" bind:click="addPlan" aria-label="增加"></t-fab>

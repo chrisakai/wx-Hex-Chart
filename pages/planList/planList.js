@@ -26,7 +26,11 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+      let list = wx.getStorageSync('list')||[]
+      this.setData({
+        list:list,
+        isEmpty:!list.length>0
+      })
     },
 
     /**
@@ -68,5 +72,11 @@ Page({
         wx.navigateTo({
           url: '/pages/addPlan/plan',
         })
-      }
+    },
+    
+    toEdit(event){
+      console.log(event)
+      let index = event.currentTarget.dataset.index
+      console.log(index)
+    }
 })

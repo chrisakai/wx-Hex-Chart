@@ -1,1 +1,47 @@
 /* pages/addPlan/plan.wxss */
+.demo {
+    padding: 0 32rpx 48rpx;
+  }
+  
+  .demo:last-child {
+    padding-bottom: 0;
+  }
+  
+  .demo-desc {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 32rpx;
+  }
+  
+  .demo .margin-16:not(:last-child) {
+    margin-right: 32rpx;
+  }
+
+  .demo-rate {
+    background-color: #fff;
+    height: 96rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32rpx;
+    border-bottom: solid 1rpx #f0f0f0;
+    border-top: solid 1rpx #f0f0f0;
+    margin-top: 32rpx;
+    margin-bottom: 32rpx;
+  }
+  
+  .demo-rate__transparent {
+    background-color: transparent;
+    padding-left: 32rpx;
+    border: 0;
+  }
+  
+  .external-class {
+    height: 256rpx;
+  }
+  
+  .button-example {
+    margin: 0 32rpx;
+  }
+  
+  

@@ -5,9 +5,28 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+      content: null
+    },
+    
+    bindContent(event){
+      this.data.content = event.detail.value
     },
 
+    save() {
+      let content = this.data.content
+      // 获取缓存数据，如果没有回返回[],如果有返回已有数据
+      let list = wx.getStorageSync('list')||[]
+      // 组装数据对象
+      let data = {
+        content: content
+      }
+      // 在开头插入到数组中
+      list.unshift(data)
+      // 设置到本地缓存
+      wx.setStorageSync('list', list)
+      // 回到上一页面
+      wx.navigateBack()
+    },
     /**
      * 生命周期函数--监听页面加载
      */

@@ -1,9 +1,17 @@
 {
+    "usingComponents": {
+        "t-upload": "tdesign-miniprogram/upload/upload",
+        "t-tag": "tdesign-miniprogram/tag/tag",
+        "t-check-tag": "tdesign-miniprogram/check-tag/check-tag",
+        "t-textarea": "tdesign-miniprogram/textarea/textarea",
+        "t-rate": "tdesign-miniprogram/rate/rate",
+        "t-button": "tdesign-miniprogram/button/button"
+      },
     "pages": [
         "pages/index/index",
         "pages/planList/planList",
         "pages/addPlan/plan"
-    ],
+    ],  
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",

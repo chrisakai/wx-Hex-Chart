@@ -22,9 +22,9 @@
         "uploadWithSourceMap": true,
         "compileHotReLoad": true,
         "lazyloadPlaceholderEnable": false,
-        "useMultiFrameRuntime": false,
-        "useApiHook": false,
-        "useApiHostProcess": false,
+        "useMultiFrameRuntime": true,
+        "useApiHook": true,
+        "useApiHostProcess": true,
         "babelSetting": {
             "ignore": [],
             "disablePlugins": [],
@@ -36,12 +36,14 @@
         "packNpmRelationList": [],
         "minifyWXSS": true,
         "disableUseStrict": false,
+        "minifyWXML": true,
         "showES6CompileOption": false,
         "useCompilerPlugins": false,
-        "ignoreUploadUnusedFiles": true
+        "ignoreUploadUnusedFiles": false,
+        "userConfirmedUseIsolateContext": false
     },
     "compileType": "miniprogram",
-    "libVersion": "2.10.1",
+    "libVersion": "3.3.5",
     "appid": "wx0cab8a53a4bab623",
     "projectname": "you-wxapp-projectname",
     "debugOptions": {
